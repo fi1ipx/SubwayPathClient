@@ -31,14 +31,10 @@ public class NewJerseyClient {
         webTarget = client.target(BASE_URI).path("subwaypath");
     }
 
-    public String getPath(int dst, int src) throws ClientErrorException {
+    public String getPath(int src, int dst) throws ClientErrorException {
         WebTarget resource = webTarget;
-        //if (dst != null) {
-            resource = resource.queryParam("dst", dst);
-        //}
-        //if (src != null) {
-            resource = resource.queryParam("src", src);
-        //}
+        resource = resource.queryParam("src", src);
+        resource = resource.queryParam("dst", dst);
         resource = resource.path("getPath");
         return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(String.class);
     }
