@@ -38,6 +38,7 @@ public class Station {
         this.lineNum = lineNum;
     }
     
+    @Override
     public String toString() {
         return name + " - " + lineNum;
     }
