@@ -6,6 +6,8 @@
 package com.moscowsubway.restcl;
 
 import java.util.ArrayList;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.json.*;
 
 public class SubwayClient {
@@ -45,6 +47,9 @@ public class SubwayClient {
             station.setName(jStn.getString("name"));
             station.setId(jStn.getInt("id"));
             station.setLineNum(jStn.getInt("lineNum"));
+            javafx.scene.image.Image image = new javafx.scene.image.Image(getClass().getResource("/imgs/l" + station.getLineNum() + ".png").toExternalForm());
+            ImageView imageView = new ImageView(image);
+            station.setImage(imageView);
             stations.add(station);
         }
         return stations;

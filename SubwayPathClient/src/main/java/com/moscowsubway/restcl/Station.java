@@ -5,6 +5,8 @@
  */
 package com.moscowsubway.restcl;
 
+import javafx.scene.image.ImageView;
+
 /**
  *
  * @author Fil
@@ -13,6 +15,15 @@ public class Station {
     private int id;
     private String name;
     private int lineNum;
+    private ImageView image;
+
+    public ImageView getImage() {
+        return image;
+    }
+
+    public void setImage(ImageView image) {
+        this.image = image;
+    }
 
     public int getId() {
         return id;

@@ -38,6 +38,9 @@ public class FXMLController implements Initializable {
     private TableColumn lineNumColumn;
     
     @FXML
+    private TableColumn imgColumn;
+    
+    @FXML
     private Label statusLabel;
     
     @FXML
@@ -45,6 +48,7 @@ public class FXMLController implements Initializable {
         ArrayList<Station> stations = new ArrayList<>();
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         lineNumColumn.setCellValueFactory(new PropertyValueFactory<>("lineNum"));
+        imgColumn.setCellValueFactory(new PropertyValueFactory<>("image"));
         tablePath.getItems().clear();
         if (FxUtil.getComboBoxValue(srcCombo) != null && FxUtil.getComboBoxValue(srcCombo) != null) {
             Station srcSt = FxUtil.getComboBoxValue(srcCombo);

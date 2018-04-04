@@ -14,7 +14,8 @@
         <ComboBox fx:id="dstCombo" layoutX="214.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="214.0" AnchorPane.topAnchor="10.0" />
       <TableView fx:id="tablePath" layoutX="9.0" layoutY="44.0" prefHeight="526.0" prefWidth="478.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="44.0">
         <columns>
-          <TableColumn fx:id="nameColumn" prefWidth="371.0" text="Station" />
+          <TableColumn fx:id="imgColumn" prefWidth="58.0" text="Image" />
+          <TableColumn fx:id="nameColumn" prefWidth="266.0" text="Station" />
           <TableColumn fx:id="lineNumColumn" minWidth="0.0" prefWidth="106.0" text="Line" />
         </columns>
          <columnResizePolicy>
@@ -22,6 +23,6 @@
          </columnResizePolicy>
       </TableView>
       <Label fx:id="statusLabel" layoutX="10.0" layoutY="576.0" prefHeight="17.0" prefWidth="405.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="80.0" />
-      <Button fx:id="buttonUpdateCon" onAction="#handleUpdateAction" layoutX="421.0" layoutY="572.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Update" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="8.0" />
+      <Button fx:id="buttonUpdateCon" layoutX="421.0" layoutY="572.0" mnemonicParsing="false" onAction="#handleUpdateAction" prefHeight="25.0" prefWidth="66.0" text="Update" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="8.0" />
     </children>
 </AnchorPane>
